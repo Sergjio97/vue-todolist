@@ -38,6 +38,25 @@ const app = new Vue ({
 
         ],
 
+        inputValue: ""
+
     },
+
+    methods: {
+
+        addTodo: function() {
+
+            if (this.inputValue !== "") {
+                this.todos.push({text:this.inputValue});
+                this.inputValue = "";
+            }
+            
+        },
+
+        removeTodo: function(index) {
+
+        }
+
+    }
 
 });
