@@ -65,8 +65,8 @@
 
             <div class="add-todo">
 
-                <input type="text" placeholder="Inserisci il trofeo">
-                <button @click="">aggiungi</button>
+                <input type="text" placeholder="Inserisci il trofeo" v-model="inputValue">
+                <button @click="addTodo()">aggiungi</button>
 
             </div>
 
@@ -74,7 +74,7 @@
 
                 <ul>
 
-                    <li><span>Ciao</span> <i class="fas fa-times"></i></li>
+                    <li v-for="(todo, index) in todos"><span>{{todo.text}}</span> <i class="fas fa-times" @click="removeTodo(index)"></i></li>
 
                 </ul>
 

@@ -38,7 +38,7 @@ const app = new Vue ({
 
         ],
 
-        inputValue: ""
+        inputValue: "",       
 
     },
 
@@ -54,7 +54,7 @@ const app = new Vue ({
         },
 
         removeTodo: function(index) {
-
+            this.todos.splice(index);
         }
 
     }
