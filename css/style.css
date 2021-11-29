@@ -15,7 +15,9 @@ body {
 #root {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(0, 0, 47);
+    background-image: url(../img/When-The-Witcher-3-Released-How-It-Changed-After-Launch-1.webp);
+    background-size: cover;
+    background-position: center;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -42,6 +44,82 @@ header {
 }
 
 .header-box h1 {
-    font-size: 40px;
+    font-size: 45px;
     color: #e73740;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MAIN                                    */
+/* -------------------------------------------------------------------------- */
+
+main {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  ADD TODO                                  */
+/* -------------------------------------------------------------------------- */
+
+.add-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-todo input {
+    padding: 20px;
+    margin: 20px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+.add-todo button {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: #e73740;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  TODO BOX                                  */
+/* -------------------------------------------------------------------------- */
+
+.todo-box {
+    width: 70%;
+    height: 70%;
+    background-color: #e73740;
+    border-radius: 10px;
+    box-shadow: 10px 10px #cc5b61;
+    font-size: 30px;
+}
+
+.todo-box ul li {
+    list-style: none;
+    margin: 20px 20px;
+}
+
+.todo-box li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-box li i {
+    cursor: pointer;
+}
+
+.active {
+    text-decoration: line-through;
 }
