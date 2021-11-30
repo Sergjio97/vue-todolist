@@ -98,7 +98,7 @@ main {
 
 .todo-box {
     width: 70%;
-    height: 70%;
+    max-height: 90%;
     background-color: #e73740;
     border-radius: 10px;
     box-shadow: 10px 10px #cc5b61;
@@ -114,6 +114,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.todo-box li span {
+    cursor: pointer;
 }
 
 .todo-box li i {

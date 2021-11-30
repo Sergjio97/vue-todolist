@@ -4,11 +4,13 @@ const app = new Vue ({
 
     data : {
 
-        todos: [
+        todos: 
+        
+        [
 
             {
                 text: "Lillà e uva spina",
-                done: false
+                done: true
             },
 
             {
@@ -47,14 +49,24 @@ const app = new Vue ({
         addTodo: function() {
 
             if (this.inputValue !== "") {
-                this.todos.push({text:this.inputValue});
+                this.todos.push({text:this.inputValue, done: false});
                 this.inputValue = "";
             }
             
         },
 
         removeTodo: function(index) {
-            this.todos.splice(index);
+            this.todos.splice(index, 1);
+        },
+
+        doneTodo: function(index){
+            // if (this.todos[index].done == true){
+            //     this.todos[index].done = false;
+            // } else {
+            //     this.todos[index].done = true;
+            // }
+            
+            this.todos[index].done = !this.todos[index].done; //sintassi contratta
         }
 
     }
